@@ -1,0 +1,11 @@
+{
+  "domain": "scorta_pellet",
+  "name": "Scorta Pellet",
+  "documentation": "https://github.com/custom-components/scorta_pellet",
+  "dependencies": [],
+  "codeowners": [],
+  "requirements": [],
+  "version": "1.0.0",
+  "iot_class": "local_polling",
+  "config_flow": true
+}
