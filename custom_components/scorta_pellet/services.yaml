@@ -1,0 +1,29 @@
+# Defines services for Scorta Pellet integration
+
+add_pellets:
+  name: Add Pellets
+  description: Add pellet bags to the stock.
+  fields:
+    amount:
+      name: Amount
+      description: Number of pellet bags to add.
+      required: true
+      selector:
+        number:
+          min: 1
+          step: 1
+          mode: box
+
+remove_pellets:
+  name: Remove Pellets
+  description: Remove pellet bags from the stock.
+  fields:
+    amount:
+      name: Amount
+      description: Number of pellet bags to remove.
+      required: true
+      selector:
+        number:
+          min: 1
+          step: 1
+          mode: box
