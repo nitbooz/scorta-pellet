@@ -5,6 +5,8 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.entity import DeviceInfo
 
+from . import DOMAIN
+
 async def async_setup_entry(
     hass: HomeAssistant,
     config_entry: ConfigEntry,
@@ -43,7 +45,7 @@ class ScortaPelletSensor(SensorEntity):
     def device_info(self) -> DeviceInfo:
         """Return device information."""
         return DeviceInfo(
-            identifiers={("scorta_pellet", self.config_entry.entry_id)},
+            identifiers={(DOMAIN, self.config_entry.entry_id)},
             name="Scorta Pellet",
             manufacturer="Custom Components",
             model="Pellet Stock Manager",

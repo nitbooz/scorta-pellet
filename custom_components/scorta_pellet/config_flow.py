@@ -17,13 +17,18 @@ class ScortaPelletConfigFlow(config_entries.ConfigFlow, domain="scorta_pellet"):
         user_input: dict[str, Any] | None = None,
     ) -> FlowResult:
         """Handle the initial step."""
+        import voluptuous as vol
+        from homeassistant.helpers import config_validation as cv
+        
         if user_input is None:
             return self.async_show_form(
                 step_id="user",
-                data_schema=None,
+                data_schema=vol.Schema({
+                    vol.Required("initial_stock", default=0): cv.positive_int,
+                }),
             )
 
         return self.async_create_entry(
             title="Scorta Pellet",
-            data={},
+            data={"initial_stock": user_input["initial_stock"]},
         )

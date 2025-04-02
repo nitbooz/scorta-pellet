@@ -5,13 +5,15 @@ from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 
 LOGGER = logging.getLogger(__name__)
+DOMAIN = "scorta_pellet"
 PLATFORMS = [Platform.SENSOR]
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Scorta Pellet from a config entry."""
+    initial_stock = entry.data.get("initial_stock", 0)
     hass.data.setdefault(entry.entry_id, {
-        "total_pellets": 0,
-        "history": []
+        "total_pellets": initial_stock,
+        "history": [("initial", initial_stock)] if initial_stock > 0 else []
     })
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
@@ -32,8 +34,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             hass.data[entry.entry_id]["history"].append(("remove", amount))
             await hass.data[entry.entry_id]["sensor"].async_update_ha_state()
 
-    hass.services.async_register(entry.entry_id, "add_pellets", add_pellets)
-    hass.services.async_register(entry.entry_id, "remove_pellets", remove_pellets)
+    hass.services.async_register(DOMAIN, "add_pellets", add_pellets)
+    hass.services.async_register(DOMAIN, "remove_pellets", remove_pellets)
 
     return True
 
