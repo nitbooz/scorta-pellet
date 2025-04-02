@@ -27,7 +27,7 @@ class ScortaPelletSensor(SensorEntity):
         self._attr_unique_id = f"{config_entry.entry_id}_pellet_stock"
         self._attr_name = "Scorta Pellet"
         self._attr_native_unit_of_measurement = "sacchi"
-        self._attr_icon = "mdi:sack"
+        self._attr_icon = "mdi:fireplace"
 
     @property
     def native_value(self) -> int:
