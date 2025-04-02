@@ -14,7 +14,7 @@ async def async_setup_entry(
 ) -> None:
     """Set up the Scorta Pellet sensor."""
     sensor = ScortaPelletSensor(hass, config_entry)
-    hass.data[config_entry.entry_id]["sensor"] = sensor
+    hass.data[DOMAIN][config_entry.entry_id]["sensor"] = sensor
     async_add_entities([sensor])
 
 class ScortaPelletSensor(SensorEntity):
@@ -32,13 +32,13 @@ class ScortaPelletSensor(SensorEntity):
     @property
     def native_value(self) -> int:
         """Return the current number of pellet bags."""
-        return self.hass.data[self.config_entry.entry_id]["total_pellets"]
+        return self.hass.data[DOMAIN][self.config_entry.entry_id]["total_pellets"]
 
     @property
     def extra_state_attributes(self) -> dict:
         """Return additional state attributes."""
         return {
-            "history": self.hass.data[self.config_entry.entry_id]["history"][-10:]
+            "history": self.hass.data[DOMAIN][self.config_entry.entry_id]["history"][-10:]
         }
 
     @property
