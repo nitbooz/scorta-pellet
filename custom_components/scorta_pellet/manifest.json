@@ -1,0 +1,13 @@
+{
+  "domain": "scorta_pellet",
+  "name": "Scorta Pellet",
+  "documentation": "https://github.com/nitbooz/scorta-pellet",
+  "issue_tracker": "https://github.com/nitbooz/scorta-pellet/issues",
+  "dependencies": [],
+  "codeowners": ["@nitbooz"],
+  "requirements": [],
+  "version": "1.0.0",
+  "iot_class": "local_polling",
+  "config_flow": true,
+  "homeassistant": "2023.8.0"
+}
