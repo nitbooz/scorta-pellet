@@ -1,27 +1,38 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
   <!-- Corpo della stufa a pellet -->
-  <rect x="5" y="4" width="14" height="16" rx="1" ry="1" fill="#555555" stroke="#333333"/>
+  <rect x="4" y="4" width="16" height="18" rx="1" ry="1" fill="#555555" stroke="#333333"/>
   
   <!-- Sportello della stufa -->
-  <rect x="7" y="7" width="10" height="8" rx="1" ry="1" fill="#333333" stroke="#222222"/>
+  <rect x="6" y="7" width="12" height="9" rx="1" ry="1" fill="#333333" stroke="#222222"/>
   
   <!-- Vetro dello sportello con fiamma -->
-  <rect x="8" y="8" width="8" height="6" rx="0.5" ry="0.5" fill="#111111" stroke="#222222"/>
+  <rect x="7" y="8" width="10" height="7" rx="0.5" ry="0.5" fill="#111111" stroke="#222222"/>
   
   <!-- Fiamme -->
-  <path d="M10,13 Q11,10 12,13 Q13,10 14,13" fill="#FF6600" stroke="#FF9900" stroke-width="0.5"/>
-  <path d="M10.5,12.5 Q11.5,10.5 12,12.5 Q12.5,10.5 13.5,12.5" fill="#FFCC00" stroke="none"/>
+  <path d="M9,14 Q10.5,10 12,14 Q13.5,10 15,14" fill="#FF6600" stroke="#FF9900" stroke-width="0.5"/>
+  <path d="M10,13.5 Q11,10.5 12,13.5 Q13,10.5 14,13.5" fill="#FFCC00" stroke="none"/>
+  <path d="M11,13 Q11.5,11 12,13 Q12.5,11 13,13" fill="#FFFFFF" stroke="none" opacity="0.7"/>
   
   <!-- Pannello di controllo -->
-  <rect x="8" y="16" width="8" height="2" rx="0.5" ry="0.5" fill="#222222" stroke="#111111"/>
-  <circle cx="10" cy="17" r="0.5" fill="#00FF00"/>
-  <circle cx="12" cy="17" r="0.5" fill="#FF0000"/>
-  <circle cx="14" cy="17" r="0.5" fill="#0000FF"/>
+  <rect x="7" y="17.5" width="10" height="2.5" rx="0.5" ry="0.5" fill="#222222" stroke="#111111"/>
+  <circle cx="9" cy="18.5" r="0.6" fill="#00FF00"/>
+  <circle cx="12" cy="18.5" r="0.6" fill="#FF0000"/>
+  <circle cx="15" cy="18.5" r="0.6" fill="#0000FF"/>
+  
+  <!-- Display digitale -->
+  <rect x="8" y="20.5" width="8" height="1" rx="0.2" ry="0.2" fill="#003366" stroke="#111111"/>
+  <line x1="9" y1="21" x2="11" y2="21" stroke="#00FFFF" stroke-width="0.3"/>
+  <line x1="12" y1="21" x2="14" y2="21" stroke="#00FFFF" stroke-width="0.3"/>
   
   <!-- Tubo di scarico -->
-  <path d="M19,6 L21,6 L21,4" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <path d="M20,6 L22,6 L22,3" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <circle cx="22" cy="2.5" r="0.5" fill="none" stroke="#333333" stroke-width="0.5"/>
   
   <!-- Serbatoio pellet -->
-  <path d="M5,4 L5,2 L19,2 L19,4" fill="#777777" stroke="#333333"/>
-  <line x1="8" y1="3" x2="16" y2="3" stroke="#333333" stroke-width="0.5"/>
+  <path d="M4,4 L4,2 L20,2 L20,4" fill="#777777" stroke="#333333"/>
+  <path d="M6,3 C10,2.5 14,3.5 18,3" stroke="#333333" stroke-width="0.5" fill="none"/>
+  
+  <!-- Piedini della stufa -->
+  <rect x="5" y="22" width="2" height="0.5" rx="0.2" ry="0.2" fill="#333333"/>
+  <rect x="17" y="22" width="2" height="0.5" rx="0.2" ry="0.2" fill="#333333"/>
 </svg>
