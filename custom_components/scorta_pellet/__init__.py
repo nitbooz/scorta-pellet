@@ -6,7 +6,7 @@ from homeassistant.core import HomeAssistant
 
 LOGGER = logging.getLogger(__name__)
 DOMAIN = "scorta_pellet"
-PLATFORMS = [Platform.SENSOR]
+PLATFORMS = [Platform.SENSOR, Platform.UPDATE]
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Scorta Pellet from a config entry."""
