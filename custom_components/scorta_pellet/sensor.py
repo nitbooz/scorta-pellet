@@ -1,4 +1,4 @@
-\"""Sensor platform for Scorta Pellet."""
+"""Sensor platform for Scorta Pellet."""
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
